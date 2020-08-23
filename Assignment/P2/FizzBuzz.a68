@@ -1,0 +1,20 @@
+# Alec Maughan PL Workshop 2 #
+# Algol 68 FizzBuzz #
+
+FOR i TO 100
+DO
+    IF i MOD 15 = 0
+    THEN
+        print ("FizzBuzz")
+    ELIF i MOD 3 = 0
+    THEN
+        print ("Fizz")
+    ELIF i MOD 5 = 0
+    THEN
+        print ("Buzz")
+    ELSE
+        print (i)
+    FI;
+
+    print (newline)
+OD
