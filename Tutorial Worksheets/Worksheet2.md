@@ -20,17 +20,24 @@ Like pass-by-reference except it had some niche problems, it evaluates the
 referenced values lazily so can be inconsistent with what parameters are
 evaluated across multiple runs.
 
+It's a function that acts in the scope of it's caller.
+
+If you create a local variable in the pass-by-name function, the variable is
+local to the calling scope.
+
 ### 3.
 
 *What is the difference between call-by-value and call-by-reference.*
 
-The call-by-name parameters are evaluated lazily.
+Value vs pointer to the value.
 
 ### 4.
 
 *Give two advantages that FORTRAN had over ALGOL-60.*
 
-Built-in IO, faster math.
+Built-in IO.
+
+Better float support.
 
 ### 5.
 
@@ -87,8 +94,6 @@ Each scope has an activation record.
 
 *How does ALGOL solve the “dangling” ELSE problem? Is it different from C?*
 
-<!-- TODO -->
-
 ### 13.
 
 *Explain how tombstones can be used to address memory problems.*
@@ -99,8 +104,6 @@ NULL.
 ### 14.
 
 *What is the problem with dynamic scoping?*
-
-<!-- TODO -->
 
 ### 15.
 
@@ -147,9 +150,16 @@ activation record instances on the stack.*
 *What is the problem with structural equivalence when comparing two data
 structures?*
 
+You know for sure that they contain the same thing if they are structurally
+equivalent.
+
 ### 17.
 
 *What is name equivalence? Does it have any disadvantages?*
+
+Checking for type equivalence based on declared type names.
+
+Multiple types can have the same name but contain different things.
 
 ### 18.
 
