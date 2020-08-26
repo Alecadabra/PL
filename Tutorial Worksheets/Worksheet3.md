@@ -21,6 +21,8 @@ multiple structures with different structures but the same name.
 *How were the arrays changed in Pascal when compared with Algol60? What was the
 reason for the changes?*
 
+Algol 60 arrays have arbritary indexes.
+
 Pascal arrays have bounds fixed and part of the type, to pass an array into a
 procedure, the procedure must accept an array of only those exact dimensions,
 and an array can not be resized.
@@ -41,7 +43,7 @@ defence-in-depth.
 
 *How does the subtype differ from the derived type in Ada?*
 
-A subtype is still the type it's derived from, so for example, you could use
+A subtype inherits the type it's derived from, so for example, you could use
 integer operations on a subtype of integer, but not on a new derived type of
 integer.
 
@@ -68,7 +70,8 @@ It allowed variables to be initialised on declaration.
 
 *Is ADA more consistent syntactically when compared with Pascal?*
 
-<!-- TODO -->
+Yes, Pascal has consistency problems such as parameters implicitly being pass-by-value
+unless excplicity stated as pass-by-reference.
 
 ### 9
 
@@ -77,6 +80,9 @@ language to make it more secure? Justify your answer.*
 
 Add exception handling, as it allows for proper error control rather than complete
 system crashes.
+
+Ability for multiple files, adds information hiding which improves security by having
+people not know specifics of implementations.
 
 ### 10
 
@@ -103,6 +109,9 @@ It violates information hiding as the exception name is defined only within
 the inner workings of the package raising the exception, which violates what
 Ada strived to do in it's improved information hiding.
 
+It also violates defence-in-depth as it cannot detect certain exceptions such
+as kernel-level exceptions.
+
 ### 12
 
 *How are exceptions handled in ADA?*
@@ -127,9 +136,10 @@ True, it has the procedure decide on the effects that it has on the parameters.
 
 ### 15
 
-*Compare and contrast the Pascal programming language with ADA.*
+*Compare and contrast the Pascal programming language with Ada.*
 
-<!-- TODO -->
+Use of semicolons; in Pascal, they separate statements but in Ada they terminate
+them.
 
 ### 16
 
@@ -169,10 +179,17 @@ on the practices allowed for with goto-based flow and freely accessible data.
 
 ### 21
 
-*Describe the modifications suggested by Wolf and Shaw to address the issues
+*Describe the modifications suggested by Wulf and Shaw to address the issues
 associated with the block structure.*
 
-<!-- TODO -->
+No implicit inheritance, name access must be explicit
+
+Name access should be by mutual consent, both creator and accessor
+
+Access to structures and substructures should be decoupled
+
+Should be able to distinguish different access types, ie read only, read-write,
+etc…
 
 ### 22
 
@@ -189,4 +206,4 @@ structured programming (With FORTRAN's multiple gotos).
 *Is the statement "FORTRAN allows a primitive way to achieve encapsulation", true
 or false? Justify your answer.*
 
-<!-- TODO -->
+False. There is basically no way. Eg. the Common block is globally accessible.
