@@ -4,9 +4,11 @@
 
 FizzBuzz in Fortran 77 up to 100.
 
-Compile `FizzBuzz.f` using f77
+Source code located in FizzBuzz.f`
 
-Run with `./a.out`
+Compile with `f77 FizzBuzz.f`.
+
+Run with `./a.out`.
 
 Issue: The program outputs whitespace before printing numbers.
 

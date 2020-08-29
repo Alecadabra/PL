@@ -4,7 +4,9 @@
 
 FizzBuzz in Algol 68 up to 100.
 
-Run with `a68g FizzBuzz.a68`
+Source code located in `FizzBuzz.a68`.
+
+Run with `a68g FizzBuzz.a68`.
 
 Issue: The program outputs whitespace before printing numbers.
 
