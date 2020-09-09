@@ -15,6 +15,42 @@
 ```
 *draw the corresponding syntax graphs for the EBNF rules.*
 
+`<program>`:
+
+`*-->(begin)-->[smt_list]-->(end)-->*`
+
+`<stmt_list>`:
+
+```
+*-+->smt-+->*
+  |      |
+  +-(;)<-+
+```
+
+`<stmt>`:
+
+`*->[var]->(=)->[expression]->*`
+
+`<var>`:
+
+```
+  +->(A)-+
+  |      |
+*-+->(B)-+->*
+  |      |
+  +->(C)-+
+
+```
+
+`<expression>`:
+```
+*->[var]-+->(+)-+->[var]->*
+         |      |
+         +->(-)-+
+         |
+         +->*
+         
+```
 
 ### 2
 
@@ -33,6 +69,14 @@
 [\<expression\>](http://cui.unige.ch/db-research/Enseignement/analyseinfo/JAVA/expression.html)
 [\<statement\>](http://cui.unige.ch/db-research/Enseignement/analyseinfo/JAVA/statement.html)*
 
+```
+*->(for)->(()->-+->[variable_delclaration]-+->-+---------------+->(;)-+---------------+->(;)->())->[statement]
+                |                          |   |               |      |               |
+                +->[expression]->(;)-------+   +->[expression]-+      +->[expression]-+
+                |                          |
+                +->(;)---------------------+
+```
+
 ### 3
 
 #### i
@@ -48,6 +92,14 @@ a single digit signed integer):*
 const a = 5;
 const b = -2, c2 = 4, constant3 = 0;
 ```
+
+```ebnf
+<var_name>::= (a-zA-Z){a-zA-Z0-9}
+<var_value>::= (0|1|2|3|4|5|6|7|8|9)+
+<const_declaration>::= "const"(<var_name>"="<var_name>){","<var_name>"="<var_name>}
+```
+
+I did the EBNF instead of the syntax graph :shrug:
 
 #### ii
 
@@ -65,10 +117,16 @@ TYPE b : int, a : real, c : complex, x : complex;
 
 *Convert the syntax graphs to EBNF.*
 
+Skipped.
+
 ### 4
 
 *Languages continually evolve. What sort of restrictions are appropriate for
 changes made to programming languages?*
+
+Break backwards compatability.
+
+Also changing the PL paradigm, adding features already handled by the language.
 
 ### 5
 
@@ -78,7 +136,26 @@ specifying 3 things you would like to include in the language and 3 things that 
 under no circumstances be included in the new language. You are also required to
 explain your feature selection.*
 
+Don't include:
+
+Goto - Bad for readability, security, defence-in-depth - It's 2020, use a control structure.
+
+Pointers - Not needed when you steal Ada's parameter passing.
+
+Nulls - This is quite difficult but it could make for a great language.
+
+Do include:
+
+Ada's parameter passing - It's super orthogonal, no need for pointers, very flexible.
+
+Exception handling - Essential for proper defence-in-depth and reliability.
+
+Strong typing - More readable and reliable code.
+
 ### 6
 
-*Write an EBNF grammar for lists of numbers: [], [1], [1, 2, 3], [2, 4, 5, 8, 23].
+*Write an EBNF grammar for lists of numbers: \[\], \[1\], \[1, 2, 3\], \[2, 4, 5, 8, 23\].
 Your answer should cover all lists.*
+
+<num>::= (0|1|2|3|4|5|6|7|8|9)+
+<num_list>::= "["<num>{", "<num>}"]"
