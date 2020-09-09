@@ -157,5 +157,7 @@ Strong typing - More readable and reliable code.
 *Write an EBNF grammar for lists of numbers: \[\], \[1\], \[1, 2, 3\], \[2, 4, 5, 8, 23\].
 Your answer should cover all lists.*
 
+```ebnf
 <num>::= (0|1|2|3|4|5|6|7|8|9)+
 <num_list>::= "["<num>{", "<num>}"]"
+```
