@@ -32,4 +32,19 @@ Lex would be used to build all of the tokens and Yacc would build the table itse
 
 ## Weekly Reflection
 
+Yacc and Lex provide a very flexible platform for interpreters, compilers and more.
 
+Having the code in C makes for fast computation and flexability.
+
+From my limited experience making this week's program, I found that having Yacc and
+Lex split into two separate programs made the implemenation harder, I feel if the
+two were merged into one, I could better utilize each of them.
+
+Syntactically, once learned they are quite writable and readable but not perfect
+due to the C breaking up the Yacc/Lex. Being from the 70's and being based on C,
+it's not the kind of language(?) that I'd expect to have the niceties of more
+modern languages.
+
+Yacc's look ahead left recursion makes for a good parsing system where errors
+are caught early in the process, even if it is initially unintuative (for me 
+atleast) to write left-recursion in the grammar specification.
