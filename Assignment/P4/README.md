@@ -22,7 +22,13 @@ The sorts the list as expected.
 *If you were building a compiler, how do you think you would implement
 a symbol table?*
 
+An array of table_entry structs, where each table_entry contains the symbol's
+name, it's full data type, the scope it's contained in, and it's value.
 
+Value will be a memory adress if it's a reference type, the primitive value
+if primitive, or the starting position of the scope if a function.
+
+Lex would be used to build all of the tokens and Yacc would build the table itself.
 
 ## Weekly Reflection
 
