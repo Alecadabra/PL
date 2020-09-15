@@ -28,7 +28,7 @@ y.tab.c y.tab.h     : lex.yy.c lex.yy.h $(NAME).y
 
 
 $(EXEC)             : lex.yy.c y.tab.c
-	cc lex.yy.c y.tab.c -g -o $(EXEC)
+	cc lex.yy.c y.tab.c -o $(EXEC)
 
 
 run                 : $(EXEC)
