@@ -50,14 +50,18 @@ Ada-style type defitions - Bad for writability.
 *Compare and contrast the methods for handling arithmetic in a shell scripting
 language such as csh with that of Ruby.*
 
+Shell scripting languages generally can't do math or if they can it's very basic.
+
 ### 4
 
 *How does one declare a class instance variable to be Public in Ruby?*
 
-With a single `@` in the variable name, ie. `@x = 0`.
+With a single `@` in the variable name, ie. `@x = 0`. Make it public
+with get and set functions.
 
 ### 5
 
 *Analyze Ruby’s design using the Criteria and Characteristics from Sebesta and
 the programming principles. Find one example to support each statement about
 Ruby supporting or not supporting each.*
+
