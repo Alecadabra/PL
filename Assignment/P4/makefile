@@ -16,7 +16,7 @@ GENERATED = $(EXEC) y.tab.* lex.yy.*
 
 # Tasks --------------------------------------------------------------------- #
 
-all					: $(SRC) $(EXEC)
+all                 : $(SRC) $(EXEC)
 
 
 lex.yy.c lex.yy.h   : $(NAME).l
@@ -28,12 +28,12 @@ y.tab.c y.tab.h     : lex.yy.c lex.yy.h $(NAME).y
 
 
 $(EXEC)             : lex.yy.c y.tab.c
-	cc lex.yy.c y.tab.c -g -o $(EXEC)
+	cc lex.yy.c y.tab.c -o $(EXEC)
 
 
 run                 : $(EXEC)
 	./$(EXEC)
 
 
-clean				:
+clean               :
 	rm -rf $(GENERATED)
