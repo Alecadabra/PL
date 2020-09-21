@@ -65,3 +65,54 @@ with get and set functions.
 the programming principles. Find one example to support each statement about
 Ruby supporting or not supporting each.*
 
+ * Abstraction
+ 
+ Ruby supports abstraction with functions and OO inheritance.
+ 
+ * Defence in depth
+ 
+ Ruby complies with defence in depth with exception handling and well defined
+ member scope.
+ 
+ * Information Hiding
+ 
+ Ruby complies by having all class members private.
+ 
+ * Labelling Programming Principle
+ 
+ Ruby complies by having named parameter passing (Position independant parameters).
+ 
+ * Orthogonality
+ 
+ Ruby complies by having similar opertaions on similar strucutres, such as arrays
+ and hashes.
+ 
+ * Preservation of information
+ 
+ Ruby complies by having variable scope explicitly in the variable name.
+ 
+ * Regularity
+ 
+ Ruby violates by having an optional `then` keyword before an `if` block.
+ 
+ * Zero-one-infinity
+ 
+ Ruby complies by having unlimited array size, class inheritance height, etc.
+ 
+ * Security
+ 
+ Ruby complies by printing a full stack trace upon any error.
+ 
+ * Simplicity
+ 
+ Ruby complies by improving on Perl's complex model and creating a heavily
+ structured and simplistic language.
+ 
+ * Structured programming
+ 
+ Ruby violates by implementing `next` and `break` which disconnect the static
+ and dynamic program structure.
+ 
+ * Syntactic consistency
+ 
+ Ruby complies by having a well strucutred and consistent syntax.
