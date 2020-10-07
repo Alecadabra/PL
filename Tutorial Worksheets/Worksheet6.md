@@ -6,15 +6,14 @@
 
 *What is a class and what does it define?*
 
-A class is a generalisation of many objects, defining data and methods.
+A class is an abstract data type.
 
 ### 2
 
 *What is the difference between a class and an object? What does an object
 encapsulate?*
 
-An object is an instance of a class, it encapsulates the data that
-the class defines the structure of.
+An object is an instance of a class, it encapsulates the state of the class.
 
 ### 3
 
@@ -24,15 +23,15 @@ of information hiding?*
 Information hiding has the specifics of implementations and contextually
 internal data hidden from outside programs.
 
-Objects have information hiding by having implementation specifics hidden
-behind function calls and data selectively publicised using functions.
+Objects do not have information hiding, it is given my the language that
+surrounds it.
 
 ### 4
 
 *In procedural programming subprograms communicate using parameters. How
 is this achieved in OOP?*
 
-With parameters in object or class methods.
+Objects pass messages to each other.
 
 ### 5
 
@@ -78,7 +77,7 @@ subclasses or outside programs referencing it as it's base class.
 A derived class represents less objects that it's parent.
 
 A derived class cannot access private members of it's parent in most languages.
-The `protected` access modifier in Java is accessible to a classes derivations.
+That's what protected access is for.
 
 ### 9
 
@@ -97,7 +96,7 @@ it's derivations.
 
 *How is repetition achieved in Smalltalk? What does it involve?*
 
-<!-- TODO -->
+Repeatedely sending a message.
 
 ### 12
 
