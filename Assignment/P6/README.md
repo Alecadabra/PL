@@ -6,6 +6,8 @@ FizzBuzz in Smalltalk.
 
 I made mine run from 1 to 100 inclusive as with Fortran and Algol's FizzBuzz.
 
+Source code located in `fizzbuzz.st`.
+
 Run with `./fizzbuzz.st` or `gst fizzbuzz.st`.
 
 ## Testing
