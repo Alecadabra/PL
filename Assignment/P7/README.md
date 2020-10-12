@@ -29,7 +29,7 @@ Source code located in `BookSorter.cpp` and `BookSorter.h`.
 
 Compile and run with `make run`.
 
-All make tasks: `all`, `clean`, run`, `valgrind`.
+All make tasks: `all`, `clean`, `run`, `valgrind`.
 
 ## Testing
 
@@ -49,4 +49,23 @@ encapsulating the entire implementation.
 
 ## Weekly Reflection
 
+Having access to OO makes for a more abstracted and orthogonal language. C++'s
+access modifiers within a class are also an Information Hiding compliance.
 
+Since C++ is built off C and not designed to break backwards compatability with
+C, it carries over many of C's problems - any analysis of C in regards to
+programming principles also applies to C++. This backwards compatability
+does greatly increase the writability of C++.
+
+The following is a list of syntactic consistency violations present in C++.
+The context-sensitive `static` keyword. The `*` operator performing
+multiplication or dereferencing. Semicolons terminating class and struct
+definitions (`};`) but not code blocks (`}`).
+
+Having all of C's functionality available as well as all of C++'s functionality
+is a large simplicity violation. Almost everything has a 'C way' and a 'C++
+way' of doing it. This also reduces readability.
+
+While exception handling is a good addition and improves greatly on defence in
+depth, because C++ does not run on a virtual machine it cannot catch the
+kernel's SIGSEGV which is a bit of a regularity violation.
