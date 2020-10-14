@@ -60,7 +60,8 @@ does greatly increase the writability of C++.
 The following is a list of syntactic consistency violations present in C++.
 The context-sensitive `static` keyword. The `*` operator performing
 multiplication or dereferencing. Semicolons terminating class and struct
-definitions (`};`) but not code blocks (`}`).
+definitions (`};`) but not code blocks (`}`). The `<<` and `>>` operators
+are stream operations and bit shifting operations based on the context.
 
 Having all of C's functionality available as well as all of C++'s functionality
 is a large simplicity violation. Almost everything has a 'C way' and a 'C++
