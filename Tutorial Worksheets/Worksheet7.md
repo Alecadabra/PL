@@ -8,19 +8,16 @@
 class?*
 
 The `protected` access modifier is used when a parent class wants certain members
-to be accessible to it's child classes. There is also protected inheritance.
-
-Protected members are only accessible to children of the parent class holding the
-protected members. There are special cases for the access modifier for the
-inherited protected members depending on the child's inheritance type, be it
-`public`, `protected` or `private`. 
+to be accessible to itself and it's child classes. There is also protected
+inheritance.
 
 ### 2
 
 *When deriving a class from a protected class, what is the level of access of the
 public/protected members of the base class in the derived class?*
 
-<!--TODO-->
+Protected inheritance makes public and protected members of the parent class
+protected.
 
 ### 3
 
@@ -48,7 +45,8 @@ member functions are dynamically bound by default.
 
 Give the programmer as much power and control as possible.
 
-It implements classes on top of C, making it very fast and powerful.
+It implements classes on top of C (But not Objective C), making it very
+fast and powerful.
 
 ### 6
 
@@ -64,7 +62,12 @@ unlike other implementations such as Ada.
 
 *Compare the design philosophy of Smalltalk, C++ and C#.*
 
-<!--TODO-->
+Smalltalk is a teaching lanuage.
+
+C++ is a no compromise engineering language w/ backwards compat
+with C.
+
+C# is a Java clone.
 
 ### 8
 
@@ -80,7 +83,8 @@ times, eg. a motorbike inheriting from wheel twice.
 
 *Compare and contrast the OO ‘purity’ of Smalltalk and Eiffel.*
 
-<!--TODO-->
+Eiffel wins due to multiple inheritance support (Refer to the 7 components
+of OO).
 
 ### 10
 
@@ -88,4 +92,4 @@ times, eg. a motorbike inheriting from wheel twice.
 principle and – with the help of an example – explain why Eiffel does not
 support it.*
 
-<!--TODO-->
+Labelling programming principle, contracts violate it.
