@@ -54,7 +54,7 @@ imperative languages?*
 
 *Can FPLs be used in rapid prototyping?*
 
-<!-- TODO -->
+Yes.
 
 ### 7
 
@@ -173,7 +173,17 @@ the first argument to the power of the second argument. For example:
 *Define a function that will compute the square value of a given
 number using the lambda function.*
 
-<!-- TODO -->
+```scm
+(
+    define
+    square
+    (
+        lambda
+        (x)
+        (* x x)
+    )
+)
+```
 
 ### 12
 
@@ -182,7 +192,7 @@ Given `(define stack '(a b c))`
 `pop(stack)` should return `a`
 `push(d stack)` should return `(d a b c)`*
 
-<!-- TODO -->
+`pop` is just `car` and `push` is just `cons`.
 
 ### 13
 
@@ -229,7 +239,7 @@ Given `(define stack '(a b c))`
 
 *Define a function that accepts one number as an argument and multiplies it by 2.*
 
-<!-- TODO -->
+Skipped.
 
 ### 15
 
