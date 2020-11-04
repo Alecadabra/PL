@@ -1,6 +1,13 @@
 #!/usr/bin/gprolog --consult-file
 
 
+% Fizzbuzz from 1 to 1000.
+% See readme for instructions on compiling and running.
+
+
+
+% Cases for 3, 5 and 15.
+
 fizzbuzz_check(I) :-
     divisible(I,15),
     print('FizzBuzz').
@@ -16,11 +23,22 @@ fizzbuzz_check(I) :-
     print('Buzz').
 
 
+
+% Divisibility check.
+
 divisible(I, N) :- I mod N =:= 0.
+
+
+
+% Define bounds.
 
 fizzbuzz :- fizzbuzz(1).
 
 fizzbuzz(1001).
+
+
+
+% Main logic
 
 fizzbuzz(I) :-
     I>0,
