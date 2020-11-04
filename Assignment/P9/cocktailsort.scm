@@ -20,9 +20,9 @@
 (
     define cocktail_sort_inner
     (
-        lambda (_list _size _gt)
+        lambda (_list _gt)
         (
-            if (< _size 2)
+            if (<= (length _list) 1)
 
             ; List is sorted
             _list
@@ -34,6 +34,22 @@
                     (
                         _compare
                         (if _gt > <)
+                    )
+                    (
+                        _write1
+                        (write `Inner)
+                    )
+                    (
+                        _write2
+                        (write-line _gt)
+                    )
+                    (
+                        _write3
+                        (write-line _list)
+                    )
+                    (
+                        _write4
+                        newline
                     )
                 )
                 (
@@ -59,7 +75,7 @@
                             (
                                 cocktail_sort_inner
                                 (cdr _swapped_list)
-                                (- _size 1)
+                                ;(- _size 1)
                                 _gt
                             )
                         )
@@ -67,17 +83,17 @@
 
                     ; Else, stop the inner sort as the element has bubbled
                     ; to it's correct position
-                    ; Nevermind - still recurse
-                    (
-                        cons
-                        (car _list)
-                        (
-                            cocktail_sort_inner
-                            (cdr _list)
-                            (- _size 1)
-                            _gt
-                        )
-                    )
+                    ;(
+                        _list
+                        ;cons
+                        ;(car _list)
+                        ;(
+                        ;    cocktail_sort_inner
+                        ;    (cdr _list)
+                        ;    (- _size 1)
+                        ;    _gt
+                        ;)
+                    ;)
                 )
             )
         )
@@ -87,16 +103,12 @@
 (
     define cocktail_sort_outer
     (
-        lambda (_list _size _gt)
+        lambda (_list _gt)
         (
-            if (= _size 1)
+            if (<= (length _list) 1)
 
             ; Outer pass complete, return the sorted list
-            (
-                if _gt
-                _list
-                (reverse _list)
-            )
+            _list
 
             ; Else, perform complete inner sort and recurse with the next
             ; outer sort
@@ -104,22 +116,49 @@
                 let
                 (
                     (
-                        _inner_sorted_rev
-                        (reverse (cocktail_sort_inner _list _size _gt))
+                        _inner_sorted
+                        (cocktail_sort_inner _list _gt)
+                    )
+                    (
+                        _write1
+                        (write-line `Outer:)
+                    )
+                    (
+                        _write2
+                        (write-line _list)
+                    )
+                    (
+                        _write3
+                        newline
                     )
                 )
                 (
-                    cons
-                    (car _inner_sorted_rev)
+                    if _gt
+
                     (
-                        cocktail_sort_outer
-                        (cdr _inner_sorted_rev)
+                        reverse
                         (
-                            if _gt
-                            _size
-                            (- _size 1)
+                            cons
+                            (car (reverse _inner_sorted))
+                            (
+                                reverse
+                                (
+                                    cocktail_sort_outer
+                                    (cdr (reverse _inner_sorted))
+                                    (not _gt)
+                                )
+                            )
                         )
-                        (not _gt)
+                    )
+
+                    (
+                        cons
+                        (car (reverse _inner_sorted))
+                        (
+                            cocktail_sort_outer
+                            (cdr (reverse _inner_sorted))
+                            (not _gt)
+                        )
                     )
                 )
             )
@@ -134,8 +173,9 @@
         (
             cocktail_sort_outer
             _list
-            (length _list)
             #t
         )
     )
 )
+
+(cocktail_sort `(9 3 1 4 7))

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-scheme --load $1
+#scheme --load $1
+scheme --eval <$1
