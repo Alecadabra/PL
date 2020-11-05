@@ -34,7 +34,7 @@ value of `i` and print accordingly.
 In Smalltalk, i take an `Integer` object literal of value `1` and have it
 perform the `to:` operation with the argument of an `Integer` object literal of
 value `100`.
-This evaultes to create an object of `Interval` that goes from `1` to `100`
+This evaluates to create an object of `Interval` that goes from `1` to `100`
 inclusive with the default step of `1`, which I have perform the `do:` operation
 with the argument of an instance of a code block that performs the FizzBuzz logic,
 which I won't go into further.
@@ -51,18 +51,23 @@ something like C or Fortran which are both full of irregularity and special case
 
 ## Weekly Reflection
 
-I found Smalltalk a very interesting language to learn. Object Orientation itself is a
-huge abstraction compliance (Although Smalltalk's single inheritance prevents any complex
-class structures from being created) and the language's use of pure OO is also extrememly
-regular and simple.
+#### Programming Principle Compliances
+
+Object Orientation itself is a huge abstraction compliance (Although Smalltalk's single
+inheritance prevents any complex class structures from being created) and the language's
+use of pure OO is also extrememly regular and simple.
+
+Having object's perform their own operations is good for orthogonality and information
+hiding, and it also allows for parallel computing.
+
+#### Programming Principle Violations
 
 Smalltalk's error handling by suspending the process and allowing for modifications is
 not great for defence in depth as it is not really a proper solution for large scale
 operations or when the computer is not attended by the programmer.
 
+#### Readability, Writability and Reliability
+
 Message passing is only really semantically different from procedure/function calling from
 other languages, but it does have the benefit of being able to read the program flow
 from left to right on a line.
-
-Having object's perform their own operations is good for orthogonality and information
-hiding, and it also allows for parallel computing.
