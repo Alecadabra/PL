@@ -49,13 +49,22 @@ encapsulating the entire implementation.
 
 ## Weekly Reflection
 
+#### Programming Principle Compliances
+
 Having access to OO makes for a more abstracted and orthogonal language. C++'s
 access modifiers within a class are also an Information Hiding compliance.
 
+Exception handling is a good addition and improves greatly on defence in
+depth.
+
+#### Programming Principle Violations
+
+Because C++ does not run on a virtual machine it's exception handling cannot
+catch the kernel's SIGSEGV which is a regularity violation.
+
 Since C++ is built off C and not designed to break backwards compatability with
 C, it carries over many of C's problems - any analysis of C in regards to
-programming principles also applies to C++. This backwards compatability
-does greatly increase the writability of C++.
+programming principles also applies to C++. 
 
 The following is a list of syntactic consistency violations present in C++.
 The context-sensitive `static` keyword. The `*` operator performing
@@ -67,6 +76,11 @@ Having all of C's functionality available as well as all of C++'s functionality
 is a large simplicity violation. Almost everything has a 'C way' and a 'C++
 way' of doing it. This also reduces readability.
 
-While exception handling is a good addition and improves greatly on defence in
-depth, because C++ does not run on a virtual machine it cannot catch the
-kernel's SIGSEGV which is a bit of a regularity violation.
+#### Readability, Writability and Reliability
+
+Backwards compatability with C greatly increases the writability of C++.
+
+The regularity violations of C++ make it bad for readability.
+
+Being a very static language makes for increased reliability, for example
+polymorphism must be explicit and types are strong and static.
