@@ -38,25 +38,30 @@ to Ada's `;`.
 
 ## Weekly Reflection
 
-Ada has a very elegant syntax that is very readable and writable. It is 
-easily my favourite of the languages learnt in this unit up to now.
+### Programming Principle Compliances
 
-The parameter passing syntax with `in` and/or `out` is very orthogonal and 
-provides an elegant way to handle parameters without limiting possibilites
-or using pointers.
+The parameter passing syntax with `in` and/or `out` is very orthogonal. It 
+allows for pass by reference without pointers, and explicit control over
+side effects.
 
-Ada's information hiding is also a welcome addition, I like being able to
-decide what members are private or public and not having to worry about
-accidentally accessing members from visibly hidden scopes that modern
-languages would hide.
+Ada's access types are an Information Hiding compliance.
 
-Exception handling is great for the reliability and defence-in-depth, 
-although Ada's implementation does violate Information Hiding (Which sort-of
-goes against the entire philosophy of Ada) as the lack of inheritance or 
-generic handlers means that exceptions are caught arbritarily and the handler
-implementors must peek into the exception raising code somewhat to know what to
-catch.
+Ada's `loop` is great for abstracting definite, indefinite and infinite loops.
 
-Ada's `loop` is great for abstracting definite, indefinite and infinite loops,
-although the `exit` statement is a strucuted programming violation as it is
+Exception handling is a compliance of defence in depth.
+
+### Programming Principle Violations
+
+The `exit` statement is a strucuted programming violation as it is
 equivalent to a goto or break.
+
+The implementation of exception handling violates Information Hiding as the lack
+of inheritance or generic handlers means that exceptions are caught arbritarily
+and the handler implementors must peek into the exception raising code somewhat
+to know what to catch.
+
+### Readability, Writability and Reliability
+
+Ada has a very elegant and regular syntax that is very readable and writable.
+
+Exception handling is a reliability improvement.
