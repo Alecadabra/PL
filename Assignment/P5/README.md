@@ -34,19 +34,35 @@ was very structured and easy to learn.
 
 ### Bash
 
-Being able to use all of (in this case) linux's programs inside a programming
-language exactly as you do in a terminal is great for writability and 
-readability to anyone already familiar with bash.
+#### Programming Principle Compliances
+
+Being a shell language, Bash complies with simplicity by having few constructs
+and relying on the programs installed to provide complex functions.
+
+#### Programming Principle Violations
 
 The arbritary way of ending scope, eg. `fi` for ending `if` and `done` for
 ending `for` is a regularity and syntactic consistency violation. A better
-approach would be to use braces like C or named ends like Ada.
+approach would be to use braces like C or labelled ends like Ada.
 
 Having optional string delimination makes for less readable code where it is
 not obvious if something is a statement or a literal string. This breaks 
 defence in depth.
 
+#### Readability, Writability and Reliability
+
+Being able to use all of (in this case) linux's programs inside a programming
+language exactly as you do in a terminal is great for writability and 
+readability to anyone already familiar with bash.
+
 ### Perl
+
+#### Programming Principle Compliances
+
+Perl complies with abstraction by providing subprograms and support for
+Object Orientation.
+
+#### Programming Principle Violations
 
 Perl is very large as it combines many language concepts haphazardly,
 resulting in a large simplicity principle violation.
@@ -54,12 +70,24 @@ resulting in a large simplicity principle violation.
 Paramater passing is completely arbritary, which is a big violation of defence
 in depth. It also flattens arrays into normal parameters when passed in.
 
+#### Readability, Writability and Reliability
+
+Perl is very writable as there are many different ways to do any one thing.
+
 ### Ruby
+
+#### Programming Principle Compliances
 
 Having the four member scope classes excplicitly part of the member name
 makes code readable and allows for information hiding on par with modern
 languages, especially as the only way to have a public variable is to 
 define get and set funcitons.
 
+#### Programming Principle Violations
+
 Dynamic variable types are a defence in depth violation and reduce
 readability and reliability.
+
+#### Readability, Writability and Reliability
+
+Being structured and regular makes Ruby readable.
