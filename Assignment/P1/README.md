@@ -4,7 +4,7 @@
 
 FizzBuzz in Fortran 77 up to 100.
 
-Source code located in FizzBuzz.f`
+Source code located in `FizzBuzz.f`
 
 Compile with `f77 FizzBuzz.f`.
 
@@ -35,22 +35,33 @@ am comfortable with.
 
 ## Weekly Reflection
 
+### Programming Principle Compliances
+
+The lack of information hiding means that preservation of information is complied
+to.
+
+Fortran allows for abstraction by using subprograms.
+
+### Programming Principle Violations
+
+Fortran's reliance on goto is a violation of the Structured Programming principle
+as program flow is not represented by the static structure of a Fortran program.
+
+Fortran has a number of syntactic consistency and general regularity violations
+such as the multiple types of goto.
+
+Arrays in Fortran are limited to up to 3 dimensions, and identifier names are
+limited to 6 characters - both Zero-One-Infinity violations.
+
+There is no information hiding of any sort in Fortran.
+
+### Readability, Writability and Reliability
+
 Fortran's separation of declaratives and imperatives makes for quite readable
-code.
+code. Although the reliance on gotos hurts readability as the program flow jumps
+around a lot.
 
-The unusal syntax of if-then-else hurts readability for me as someone that is
-used to the modern syntax.
+Writability suffers due to the lack of regularity.
 
-The use of line labels for use with goto hurts readability for me as someone
-that was incouraged to never touch goto in any language so is not used to
-reading the flow of the program with gotos present.
-
-The complete lack of information hiding in Fortran is very jarring for me as
-I am used to creating very OO code and being very careful about information
-hiding. For me this would also be a defence-in-depth problem and would hurt
-the reliability of programs written.
-
-I didn't end up running into any of the multiple regularity principle
-violations present in Fortran, but based on how much similar violations
-annoyed me when I learnt C, I imagine they would hurt the readability and
-reliability of programs.
+Reliability suffers from the lack of error handling mechanisms, lack of scoped
+constructs and absence of reserved words.
