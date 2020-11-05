@@ -29,24 +29,31 @@ activation records, and both static and dynamic chains, at this point.*
 
 ## Weekly Reflection
 
-Based on my limited trial run of Algol 68, I find the syntax to be very 
-readable but writability does suffer. The forced use of uppercase reserved 
-words is quite restrictive and the language is very particular about its 
-placement of semicolons; It seems that that semicolons must separate statements 
-within a block, but not the last statement of a block, which was hard to figure 
-out.
+### Programming Principle Compliances
 
-The scope delimiters also took a bit of getting used to, `THEN` is used to 
-start the scope of an `IF` or `ELIF`, which makes sense, but there is no 
-reserved word to end the scope, only if it is the end of the entire 
-`IF/ELIF/ELSE` chain, where `FI` is used. This violates the syntactic 
-consistency principle without inconsistent and arbritary scope declaration.
+Algol's introduction of proper scope with it's block strucutre is a Structured
+Programming compliance.
 
-Algol's introduction of proper scope and local variables makes for much better 
-code, I'd say that it improves the reliability of the language.
+The option of using a block wherever a single statement is expected complies with the
+regularity principle.
 
-Algol's syntactic consistency descision to use `:=` for assignment and `=` for 
-equality was easy to adjust to and a good overall descision.
+Algol is Orthogonal in it's data types, for example ommiting the complex type from
+Fortran as it could be represented more primitively as a 2-element array.
 
-The option of using block strure or a single line statement for things like 
-`IF` statements is a nice addition and complies with the regularity principle.
+### Programming Principle Violations
+
+Algol's regularity does suffer from semicolons seperating rather than ending 
+statements.
+
+Algol's scope delimiters are syntactically inconsistent; while `THEN` is used to 
+start the scope of an `IF` or `ELIF`, there is no reserved word to end the scope,
+only if it is the end of the entire `IF/ELIF/ELSE` chain, where `FI` is used.
+
+### Readability, Writability and Reliability
+
+Algol is writable in its regularity and in it's separation of reverved words and other
+constructs by forcing uppercase on reserved words.
+
+The block structure of Algol makes it very readable.
+
+Strong typing improves the language's reliability.
