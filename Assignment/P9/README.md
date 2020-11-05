@@ -42,20 +42,14 @@ Von-Neumann machines rather than the Lisp machines that Scheme is designed aroun
 
 ## Weekly Reflection
 
-### Overview
-
-Writing cocktail shaker sort in Scheme proved to be quite a challenge due to how
-different Scheme is from anything I've used in the past, but I ended up really
-liking the language in it's extreme simplicity and regularity.
-
 ### Programming Principle Compliances
 
 Scheme's two language constructs - lists and atoms, and everything being a function
 call, makes for a very simple and regular language.  It also very regular that
 even the Scheme program itself is just a Scheme list within the language.
 
-The standard Scheme functions are very Orthogonal, for example the operations
-`cons`, `car` and `cdr` are primitive but very powerful mechanisms.
+The standard Scheme functions are very orthogonal, for example the operations
+`cons`, `car` and `cdr` are primitive but very powerful tools.
 
 ### Programming Principle Violations
 
