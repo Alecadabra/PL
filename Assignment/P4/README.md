@@ -15,14 +15,14 @@ All make tasks: `all`, `run`, `clean`.
 
 ## Testing
 
-The sorts the list as expected.
+The program sorts the list as expected.
 
 ## Weekly Question
 
 *If you were building a compiler, how do you think you would implement
 a symbol table?*
 
-An array of table\_entry structs, where each table\_entry contains the symbol's
+An array of table\entry structs, where each table\entry contains the symbol's
 name, it's full data type, the scope it's contained in, and it's value.
 
 Value will be a memory adress if it's a reference type, the primitive value
@@ -33,20 +33,30 @@ itself.
 
 ## Weekly Reflection
 
-Yacc and Lex provide a very flexible platform for interpreters, compilers and
-more.
+### Programming Principle Compliances
 
-Having the code in C makes for fast computation and flexability.
+Lex's use of regular expressions is very regular (wow) and yacc's syntax
+is very transferrable from BNF, which is also regular.
 
-From my limited experience making this week's program, I found that having
-Yacc and Lex split into two separate programs made the implemenation harder, I
-feel if the two were merged into one, I could better utilize each of them.
+The idea of labelling tokens within Lex and dealing with them as just tokens
+in Yacc is a compliance of the Labelling Programming Principle.
 
-Syntactically, once learned they are quite writable and readable but not
-perfect due to the C breaking up the Yacc/Lex. Being from the 70's and being
-based on C, it's not the kind of language(?) that I'd expect to have the
-niceties of more modern languages.
+The separation of Lex and Yacc into seperate programs increases orthogonality.
 
-Yacc's look ahead left recursion makes for a good parsing system where errors
-are caught early in the process, even if it is initially unintuative (for me 
-atleast) to write left-recursion in the grammar specification.
+### Programming Principle Violations
+
+Defence in Depth is violated due to syntax errors not being meaningfully 
+described.
+
+Having C as the driving language also brings all of C's violations into the system.
+
+### Readability, Writability and Reliability
+
+Readability suffers as there is always going to be C code breaking up the Yacc or
+Lex.
+
+Using C as the driving language for Yacc & Lex makes it very writable as most
+programmers will be able to write well in C. The use of regular expressions
+also helps writability.
+
+Reliability suffers are error messages for invalid syntax are not helpful.
