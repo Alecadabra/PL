@@ -38,7 +38,7 @@ side-effects behind the scenes, specifically the `current-input-port` and
 respectively.
 
 This is a break in regularity as a result of Scheme running on
-Von-Neumann machines rather than the Lisp machines that Scheme is designed around.
+Von Neumann machines rather than the Lisp machines that Scheme is designed around.
 
 ## Weekly Reflection
 
@@ -64,10 +64,10 @@ the Security principle.
 
 ### Readability, Writability and Reliability
 
-The reliability of Scheme is greatly helped by the fact that it has no side effets.
+The reliability of Scheme is greatly helped by the fact that it has no side effects.
 
 From a procedural programming perspective, Scheme is less writable as 
-procedural constructs such as eagerly evaluated variables and general flexability
+procedural constructs such as eagerly evaluated variables and general flexibility
 are not available to the programmer. In practice the writability is more 
 significantly lessened by the fact that standard functions are very primitive;
 for example to append to a list rather than prepending, you must reverse the list,
