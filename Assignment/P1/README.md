@@ -24,8 +24,8 @@ The program passes this test.
 
 *How does Fortran compare with languages which you have used previously?*
 
-While the syntax is definetely different from other languages that I am used
-to (C, Java & Python), atleast for the simple FizzBuzz prgram written, it does
+While the syntax is definitely different from other languages that I am used
+to (C, Java & Python), at least for the simple FizzBuzz program written, it does
 not feel significantly different to write in.
 Maybe more differences would reveal themselves when writing a more complex
 program, but the differences are mostly just semantics. The fundamental tools
@@ -37,8 +37,7 @@ am comfortable with.
 
 ### Programming Principle Compliances
 
-The lack of information hiding means that preservation of information is complied
-to.
+The lack of information hiding means that the language complies with the preservation of information principle.
 
 Fortran allows for abstraction by using subprograms.
 
@@ -47,7 +46,7 @@ Fortran allows for abstraction by using subprograms.
 Fortran's reliance on goto is a violation of the Structured Programming principle
 as program flow is not represented by the static structure of a Fortran program.
 
-Fortran has a number of syntactic consistency and general regularity violations
+Fortran has several syntactic consistency and general regularity violations
 such as the multiple types of goto.
 
 Arrays in Fortran are limited to up to 3 dimensions, and identifier names are
@@ -64,4 +63,4 @@ around a lot.
 Writability suffers due to the lack of regularity.
 
 Reliability suffers from the lack of error handling mechanisms, lack of scoped
-constructs and absence of reserved words.
+constructs and the absence of reserved words.
