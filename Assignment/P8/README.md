@@ -67,10 +67,10 @@ The program passes this test.
 
 Fizz buzz was harder to implement in Prolog as I had to learn to think
 in the logic programming paradigm. Although, once I was over that hurdle,
-the language is very writable so I was able to define the FizzBuzz
+the language is very writable, so I was able to define the FizzBuzz
 functionality quite quickly. This is because I did not have to define
-exactly 'how' fizzbuzz would work in a procedural sense, but
-rather just 'what' fizzbuzz is, and the backwards chaining handles
+exactly 'how' fizz buzz would work in a procedural sense, but
+rather just 'what' fizz buzz is, and the backwards chaining handles
 the procedural steps.
 
 ## Weekly Reflection
@@ -86,7 +86,7 @@ The nature of the facts/rules accessible by the interpreter via queries
 make for a violation of the information hiding principle as all rules
 and facts are public and cannot be encapsulated in any way.
 
-The strucutre of a Prolog program in it's discrete, arbritarily ordered
+The structure of a Prolog program in its discrete, arbitrarily ordered
 facts and rules makes for a less readable program that does not follow
 the structured programming principle, especially as the programs often
 work by abusing side effects of rules.
@@ -94,8 +94,8 @@ work by abusing side effects of rules.
 ### Readability, Writability and Reliability
 
 As mentioned above in Prolog's violation of the structured programming
-principle, it is not a very readable lanuguage.
+principle, it is not a very readable language.
 
 While learning a logic language is difficult from programmers coming
 from a procedural background, once learnt, Prolog is very writable
-in it's simplicity and regularity.
+in its simplicity and regularity.
