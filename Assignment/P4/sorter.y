@@ -94,6 +94,11 @@ list:
             printf(", %d", list[i]);
         }
         printf("]\n");
+
+        free(list);
+        listSize = 0;
+        listIdx = 0;
+        list = (int*)malloc(0);
     }
     ;
 
