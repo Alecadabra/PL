@@ -22,13 +22,13 @@ The program sorts the list as expected.
 *If you were building a compiler, how do you think you would implement
 a symbol table?*
 
-An array of table\entry structs, where each table\entry contains the symbol's
+An array of table\entry struts, where each table\entry contains the symbol's
 name, it's full data type, the scope it's contained in, and it's value.
 
-Value will be a memory adress if it's a reference type, the primitive value
+Value will be a memory address if it's a reference type, the primitive value
 if primitive, or the starting position of the scope if a function.
 
-Lex would be used to build all of the tokens and Yacc would build the table
+Lex would be used to build all the tokens and Yacc would build the table
 itself.
 
 ## Weekly Reflection
@@ -36,12 +36,12 @@ itself.
 ### Programming Principle Compliances
 
 Lex's use of regular expressions is very regular (wow) and yacc's syntax
-is very transferrable from BNF, which is also regular.
+is very transferable from BNF, which is also regular.
 
 The idea of labelling tokens within Lex and dealing with them as just tokens
 in Yacc is a compliance of the Labelling Programming Principle.
 
-The separation of Lex and Yacc into seperate programs increases orthogonality.
+The separation of Lex and Yacc into separate programs increases orthogonality.
 
 ### Programming Principle Violations
 
