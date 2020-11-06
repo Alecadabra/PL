@@ -31,7 +31,7 @@ In Fortran and Algol, I used a for loop to iterate `i` from 1 to 100, and within
 the loop I used control structures to perform checks on the current
 value of `i` and print accordingly.
 
-In Smalltalk, i take an `Integer` object literal of value `1` and have it
+In Smalltalk, I take an `Integer` object literal of value `1` and have it
 perform the `to:` operation with the argument of an `Integer` object literal of
 value `100`.
 This evaluates to create an object of `Interval` that goes from `1` to `100`
