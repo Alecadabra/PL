@@ -33,7 +33,7 @@ procedure would need to take in an extra parameter giving the array size.
 The for-each style loop of Ada is syntactically different from the C-style
 for loop.
 
-I find C's use of `, ` to separate parameters less syntactically consistent
+I find C's use of `,` to separate parameters less syntactically consistent
 to Ada's `;`.
 
 ## Weekly Reflection
