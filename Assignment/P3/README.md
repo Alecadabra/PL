@@ -4,7 +4,7 @@
 
 Bubble sort in ADA.
 
-Source code located in `bubblesort.adb`.
+Source code located in `bubble sort.adb`.
 
 Compile and run with `make run`.
 
@@ -16,24 +16,24 @@ The program prints out the array in sorted order as expected.
 
 ## Weekly Question
 
-*Compare your implementation of bubble sort with an implemenation in C (you
+*Compare your implementation of bubble sort with an implementation in C (you
 may have written one, if not, there are plenty on the internet you can look
 at). What similarities and differences are there?*
 
-A big difference is Ada's neeed for declarations before the procedure block
+A big difference is Ada's need for declarations before the procedure block
 compared to C's declaration style, as well as Ada's type declaration when
-declaraing an array compared to C's `[]`.
+declaring an array compared to C's `[]`.
 
 The swap procedure is very similar as it would be in C, just using `in out`
 rather than pointers.
 
-In C, array lengths are unkown, so a print function similar to my array print
+In C, array lengths are unknown, so a print function similar to my array print
 procedure would need to take in an extra parameter giving the array size.
 
 The for-each style loop of Ada is syntactically different from the C-style
 for loop.
 
-I find C's use of `,` to separate parameters less syntactically consistent
+I find C's use of `, ` to separate parameters less syntactically consistent
 to Ada's `;`.
 
 ## Weekly Reflection
@@ -52,12 +52,12 @@ Exception handling is a compliance of defence in depth.
 
 ### Programming Principle Violations
 
-The `exit` statement is a strucuted programming violation as it is
+The `exit` statement is a structured programming violation as it is
 equivalent to a goto or break.
 
 The implementation of exception handling violates Information Hiding as the lack
-of inheritance or generic handlers means that exceptions are caught arbritarily
-and the handler implementors must peek into the exception raising code somewhat
+of inheritance or generic handlers means that exceptions are caught arbitrarily
+and the handler implementers must peek into the exception raising code somewhat
 to know what to catch.
 
 ### Readability, Writability and Reliability
