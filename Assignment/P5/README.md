@@ -2,18 +2,18 @@
 
 ## Program
 
-A script to find every '.conf' file on a computer in bash, perl and ruby.
+A script to find every `.conf` file on a computer in bash, perl and ruby.
 
-Source code located in 'findConfig.bash' (Bash), 'findConfig.pl' (Perl) and
-'findConfig.rb' (Ruby).
+Source code located in `findConfig.bash` (Bash), `findConfig.pl` (Perl) and
+`findConfig.rb` (Ruby).
 
-Run with './findConfig.<bash|pl|rb> [path]'. If no path is specified it
-will default to root ('/').
+Run with `./findConfig.<bash|pl|rb> [path]`. If no path is specified it
+will default to root (`/`).
 
 ## Testing
 
 When the current directory or a parent directory is specified all scripts find
-the 'sample.conf' file.
+the `sample.conf` file.
 
 Problem: The Perl implementation shows errors for directories it cannot check
 due to insufficient permissions. Looking into this I found that it was not
@@ -27,7 +27,7 @@ this.
 Perl, although it is known to be a very writable language, it makes it quite
 difficult to learn as there are so many ways to do any one thing.
 
-By contrast, I already knew bash and using unix 'find' was very easy, and Ruby
+By contrast, I already knew bash and using unix `find` was very easy, and Ruby
 was very structured and easy to learn.
 
 ## Weekly Reflection
@@ -41,8 +41,8 @@ and relying on the programs installed to provide complex functions.
 
 #### Programming Principle Violations
 
-The arbitrary way of ending scope, eg. 'fi' for ending 'if' and 'done' for
-ending 'for' is a regularity and syntactic consistency violation. A better
+The arbitrary way of ending scope, eg. `fi` for ending `if` and `done` for
+ending `for` is a regularity and syntactic consistency violation. A better
 approach would be to use braces like C or labelled ends like Ada.
 
 Having optional string delimitation makes for less readable code where it is
