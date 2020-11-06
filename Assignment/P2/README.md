@@ -4,7 +4,7 @@
 
 FizzBuzz in Algol 68 up to 100.
 
-Source code located in `FizzBuzz.a68`.
+Source code is located in `FizzBuzz.a68`.
 
 Run with `a68g FizzBuzz.a68`.
 
@@ -31,18 +31,18 @@ activation records, and both static and dynamic chains, at this point.*
 
 ### Programming Principle Compliances
 
-Algol's introduction of proper scope with it's block strucutre is a Structured
+Algol's introduction of proper scope with its block structure is a Structured
 Programming compliance.
 
 The option of using a block wherever a single statement is expected complies with the
 regularity principle.
 
-Algol is Orthogonal in it's data types, for example ommiting the complex type from
+Algol is Orthogonal in its data types, for example, omitting the complex type from
 Fortran as it could be represented more primitively as a 2-element array.
 
 ### Programming Principle Violations
 
-Algol's regularity does suffer from semicolons seperating rather than ending 
+Algol's regularity does suffer from semicolons separating rather than ending 
 statements.
 
 Algol's scope delimiters are syntactically inconsistent; while `THEN` is used to 
@@ -51,7 +51,7 @@ only if it is the end of the entire `IF/ELIF/ELSE` chain, where `FI` is used.
 
 ### Readability, Writability and Reliability
 
-Algol is writable in its regularity and in it's separation of reverved words and other
+Algol is writable in its regularity and in its separation of reserved words and other
 constructs by forcing uppercase on reserved words.
 
 The block structure of Algol makes it very readable.
